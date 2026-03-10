@@ -118,7 +118,7 @@ Steps:
 * Page Object Model implementation
 * Parallel test execution
 * Multi-browser support
-* CI/CD integration (Jenkins/GitHub Actions)
+* CI/CD integration (Jenkins)
 * Reporting integration (Extent Reports / Allure)
 
 ---
