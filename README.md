@@ -122,6 +122,34 @@ Steps:
 * Reporting integration (Extent Reports / Allure)
 
 ---
+## ⚡ Jenkins Job Execution
+GitHub Repository
+        │
+        ▼
+Jenkins Job Trigger
+        │
+        ▼
+Clone Repository
+        │
+        ▼
+Maven Build (mvn clean test)
+        │
+        ▼
+Execute TestNG Suite
+        │
+        ▼
+Display Test Results
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running NavigateTest
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+BUILD SUCCESS
+
+---
 
 ## 👨‍💻 Author
 
