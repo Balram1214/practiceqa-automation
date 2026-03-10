@@ -12,8 +12,9 @@ It automates test scenarios for the Practice Software Testing application and fo
 * Java
 * Selenium WebDriver
 * TestNG
-* Maven
+* Apache Maven
 * Git & GitHub
+* Jenkins (CI Integration)
 * Eclipse IDE
 
 ---
@@ -24,6 +25,7 @@ It automates test scenarios for the Practice Software Testing application and fo
 practiceqa-automation
 │
 ├── pom.xml
+├── testng.xml
 ├── README.md
 │
 ├── src
@@ -60,9 +62,9 @@ practiceqa-automation
 * Clean separation of:
 
   * Test classes
-  * Page/base classes
+  * Page/Base classes
   * Utilities
-  * Configuration
+  * Configuration files
 
 ---
 
@@ -92,7 +94,7 @@ browser=chrome
 
 ### Using Maven
 
-Run the following command in the project root:
+Run the following command in the project root directory:
 
 ```
 mvn clean test
@@ -104,25 +106,31 @@ mvn clean test
 
 **NavigateTest**
 
-Steps:
+Steps performed:
 
-1. Read application URL from config file
+1. Read application URL from configuration file
 2. Launch browser
-3. Navigate to application
+3. Navigate to the application
 4. Print page title in console
 
 ---
 
-## 📈 Future Improvements
+## 🔄 CI/CD Integration
 
-* Page Object Model implementation
-* Parallel test execution
-* Multi-browser support
-* CI/CD integration (Jenkins)
-* Reporting integration (Extent Reports / Allure)
+This framework is integrated with **Jenkins** for Continuous Integration.
+
+Jenkins automatically performs the following steps:
+
+1. Pulls the latest source code from **GitHub**
+2. Builds the project using **Maven**
+3. Executes **TestNG test suite**
+4. Displays the test results in the Jenkins dashboard
 
 ---
-## ⚡ Jenkins Job Execution
+
+## ⚡ Jenkins Job Execution Flow
+
+```
 GitHub Repository
         │
         ▼
@@ -139,7 +147,11 @@ Execute TestNG Suite
         │
         ▼
 Display Test Results
+```
 
+Example Jenkins console result:
+
+```
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
@@ -148,6 +160,17 @@ Running NavigateTest
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 
 BUILD SUCCESS
+```
+
+---
+
+## 📈 Future Improvements
+
+* Implement complete **Page Object Model (POM)**
+* Parallel test execution with TestNG
+* Multi-browser support
+* Advanced reporting (Extent Reports / Allure)
+* GitHub Webhook integration for automatic Jenkins builds
 
 ---
 
@@ -156,6 +179,6 @@ BUILD SUCCESS
 **Balram Rajale**
 
 QA Engineer | Automation Testing
-Experience: 3.5+ Years in Software Testing
+Experience: **3.5+ Years in Software Testing**
 
 ---
